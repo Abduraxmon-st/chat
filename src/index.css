@@ -1,0 +1,145 @@
+body {
+   background-color: #282c34;
+   margin: 0;
+   font-family: sans-serif;
+}
+
+.App {
+   text-align: center;
+   max-width: 728px;
+   margin: 0 auto;
+}
+
+.App header {
+   background-color: #181717;
+   height: 10vh;
+   min-height: 50px;
+   color: white;
+   position: fixed;
+   width: 100%;
+   max-width: 728px;
+   top: 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   z-index: 99;
+   padding: 10px;
+   box-sizing: border-box;
+}
+
+.App section {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   min-height: 100vh;
+   background-color: rgb(40, 37, 53);
+}
+
+main {
+   padding: 10px;
+   height: 80vh;
+   margin-top: 10vh;
+   overflow-y: scroll;
+   display: flex;
+   flex-direction: column;
+}
+
+form {
+   height: 10vh;
+   position: fixed;
+   bottom: 0;
+   background-color: rgb(24, 23, 23);
+   width: 100%;
+   max-width: 728px;
+   display: flex;
+   font-size: 1.5rem;
+}
+
+form button {
+   width: 20%;
+   background-color: rgb(56, 56, 143);
+   border: none;
+   color: white;
+}
+
+input {
+   line-height: 1.5;
+   width: 100%;
+   font-size: 1.5rem;
+   background: rgb(58, 58, 58);
+   color: white;
+   outline: none;
+   border: none;
+   padding: 0 10px;
+}
+
+.sign-in {
+   color: #282c34;
+   background: white;
+   max-width: 400px;
+   margin: 0 auto;
+   padding: 1rem;
+   border-radius: 8px;
+   border: none;
+   font-size: 1.5rem;
+   cursor: pointer;
+}
+
+.sign-out {
+   background: #7367f0;
+   border: none;
+   color: white;
+   padding: 10px 15px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.message {
+   display: flex;
+   align-items: center;
+   margin: 10px 0;
+}
+
+.message-content {
+   margin-left: 10px;
+   background: #3e3e3e;
+   padding: 5px 15px;
+   border-radius: 15px;
+   text-align: left;
+}
+
+.sender-name {
+   font-size: 0.8rem;
+   font-weight: bold;
+   color: #7367f0;
+   margin: 0 0 5px;
+}
+
+.text {
+   color: white;
+   margin: 0;
+}
+
+.sent {
+   flex-direction: row-reverse;
+}
+
+.sent .message-content {
+   background: #7367f0;
+}
+
+.sent .sender-name {
+   display: none;
+}
+
+.received .message-content {
+   background-color: #353740;
+   color: white;
+}
+
+.message img {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   margin: 2px 5px;
+}
