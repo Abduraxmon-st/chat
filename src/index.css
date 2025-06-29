@@ -173,7 +173,6 @@ input {
 
 .text {
    max-width: 400px;
-   color: white;
    margin: 0;
 }
 
@@ -184,6 +183,7 @@ input {
 
 .sent .message-content {
    background: #4629F2;
+   color: #fff;
 }
 
 .sent .sender-name {
