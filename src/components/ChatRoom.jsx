@@ -36,15 +36,28 @@ function ChatRoom() {
       createdAt: serverTimestamp(), // Serverning aniq vaqtini belgilash
       uid,
       displayName,
-    });
+    }) 
+    setFormValue('');// Yozish maydonini tozalaymiz
+    };
+     
+    const messagesEndRef = useRef(null)
+    
+    const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+  }
 
-    setFormValue(''); // Yozish maydonini tozalaymiz
-  };
+  useEffect(() => {
+    scrollToBottom()
+  }, [messages]);
+
 
   return (
     <>
       <main>
-        {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
+        <span className='main-span'>
+          {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
+          <div ref={messagesEndRef} />
+        </span>
       </main>
       <form onSubmit={sendMessage}>
         <input 
@@ -52,7 +65,9 @@ function ChatRoom() {
           onChange={(e) => setFormValue(e.target.value)} 
           placeholder="Xabar yozing..." 
         />
-        <button type="submit">➡️</button>
+        <button type="submit">
+          <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 24 24"><path fill="currentColor" d="m14.475 12l-7.35-7.35q-.375-.375-.363-.888t.388-.887t.888-.375t.887.375l7.675 7.7q.3.3.45.675t.15.75t-.15.75t-.45.675l-7.7 7.7q-.375.375-.875.363T7.15 21.1t-.375-.888t.375-.887z" /></svg>
+        </button>
       </form>
     </>
   );

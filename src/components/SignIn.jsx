@@ -9,9 +9,12 @@ function SignIn() {
   };
 
   return (
-    <button className="sign-in" onClick={signInWithGoogle}>
-      Google orqali kirish
-    </button>
+    <div className='sign-inBox'>
+      <p>Chatdan foydalanishingiz uchun Aftorizatsiya qilishingiz kerak</p>
+      <button className="sign-in" onClick={signInWithGoogle}>
+        Google orqali kirish
+      </button>
+    </div>
   );
 }
 

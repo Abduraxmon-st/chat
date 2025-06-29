@@ -17,15 +17,18 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <h1>Mening Super Chatim 💬</h1>
-        {/* Agar foydalanuvchi kirgan bo'lsa, Chiqish tugmasini ko'rsat */}
-        {user && <SignOut />}
-      </header>
-      <section>
-        {/* Agar foydalanuvchi kirgan bo'lsa, chat xonasini, aks holda Kirish oynasini ko'rsat */}
-        {user ? <ChatRoom /> : <SignIn />}
-      </section>
+      <div>s</div>
+      <div className='app-main'>
+        <header>
+          <h1>Super Chat</h1>
+          {/* Agar foydalanuvchi kirgan bo'lsa, Chiqish tugmasini ko'rsat */}
+          {user && <SignOut />}
+        </header>
+        <section>
+          {/* Agar foydalanuvchi kirgan bo'lsa, chat xonasini, aks holda Kirish oynasini ko'rsat */}
+          {user ? <ChatRoom /> : <SignIn />}
+        </section>
+      </div>
     </div>
   );
 }
